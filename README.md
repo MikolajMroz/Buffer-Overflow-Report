@@ -1,0 +1,12 @@
+# Buffer-Overflow-Report
+A write-up demonstrating and analysing a buffer overflow vulnerability in a media player application.
+
+The aim of this paper is to educate the reader about stack overflows, considering both theoretical and practical knowledge. This was done through the use of easy-to-follow tutorials, explanations, and screenshots, detailing every step with the end goal of producing a working payload, both on a protected (DEP enabled) and unprotected Windows XP machine hosted in VMware. The target application was a CoolPlayer Media Player with a stack overflow vulnerability in its skin upload feature, which was crashed and exploited through the use of carefully crafted .ini files in Perl. Each crash was analysed in a debugger to visually demonstrate the inner workings of the machine’s memory and process stack during a buffer overflow attack, helping to improve learning and understanding of the issue at hand. 
+
+The information covered in this document is based off a Steflan Security stack overflow methodology, used as a resource for Offensive Security students studying for their OSCP certification. This covers everything from the very basics of fuzzing inputs and crashing the program to adding advanced reverse shell payloads.
+
+From the results, it is clear that buffer overflow attacks still pose a great risk to those who use outdated operating systems. This was further exemplified by the ransomware attacks on the NHS from 2016 which cost the service a debilitating £92m (National Health Executive, 2018), as the vast majority of machines used were running on Windows XP, the vulnerabilities of which are highlighted in this report. The results show that no security solution is perfect, as even something like DEP, created to act as a roadblock for attackers, can be circumvented relatively easily using resources freely available online. The results also emphasise the importance of creating and using programs built with security in mind, as amateurish, out of date software is likely to be misused by attackers, causing great threat to those who are unaware of the implications of poorly written and vulnerable software. 
+
+## References
+
+National Health Executive. (2018, 10 12). WannaCry cyber-attack cost the NHS £92m after 19,000 appointments were cancelled. Retrieved from National Health Executive: https://www.nationalhealthexecutive.com/articles/wannacry-cyber-attack-cost-nhs-ps92m-after-19000-appointments-were-cancelled
